@@ -6,11 +6,11 @@ const person = {
 };
 
 Object.defineProperties(person, {
-  firstName: {writable: false}, 
-  lastName: {writable: false}, 
-  age: {writable: false}, 
-  email: {writable: false}
-  });
+  firstName: {writable: false, configurable: false},
+  lastName: {writable: false, configurable: false},
+  age: {writable: false, configurable: false},
+  email: {writable: false, configurable: false}
+});
 
   person.updateInfo = function (newInfo) {
     Object.keys(newInfo).forEach((key) => {
